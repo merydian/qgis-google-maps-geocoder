@@ -432,7 +432,7 @@ class GoogleMapsGeocoderPlugin:
                 widget = bar.createMessage(self.tr('Google Maps'), self.tr("No API key entered, please configure"))
                 settings_button = QPushButton("Enter API Key…", pressed=partial(self.open_settings, message_bar_widget=widget))
                 widget.layout().addWidget(settings_button)
-                bar.pushWidget(widget, Qgis.Critical)
+                bar.pushWidget(widget, Qgis.MessageLevel.Critical)
 
             return False
 
